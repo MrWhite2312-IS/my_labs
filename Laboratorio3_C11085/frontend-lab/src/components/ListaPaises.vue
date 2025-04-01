@@ -1,6 +1,7 @@
 <template>
     <div class="container mt-5">
         <h1 class="display-4 text-center">Lista de países</h1>
+        <button v-on:click="popular" class="btn btn-info btn-sm">Reiniciar Lista</button>
     <table class="table is-bordered is-striped is-narrow is-hoverable
     is-fullwidth">
         <thead>
@@ -19,7 +20,8 @@
                 
                 <td>
                     <button class="btn btn-secondary btn-sm">Editar</button>
-                    <button class="btn btn-danger btn-sm">Eliminar</button>
+                    <button v-on:click="eliminar(index)" class="btn btn-danger btn-sm">Eliminar</button>
+                    
                 </td>
             </tr>
         </tbody>
@@ -40,6 +42,14 @@
                 { nombre: "Alemania", continente: "Europa", Idioma: "Alemán" },
             ],
         };
+        },
+        methods: {
+            eliminar (index) {
+                this.paises.splice(index, 1);
+            },
+            popular () {
+                location.reload();
+            }
         },
     };
 </script>
