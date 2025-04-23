@@ -60,9 +60,9 @@ export default {
         this.paises = response.data;
       });
     },
-    created: function () {
-      this.obtenerTareas();
-    },
+  },
+  created: function () {
+    this.obtenerTareas();
   },
 };
 </script>
