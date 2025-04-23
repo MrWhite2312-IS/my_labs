@@ -1,6 +1,15 @@
 <template>
   <div class="container mt-5">
     <h1 class="display-4 text-center">Lista de países</h1>
+    <div class="row justify-content-end">
+      <div class="col-2">
+        <a href="/pais">
+          <button type="button" class="btn btn-outline-secondary float-right">
+            Agregar Pais
+          </button>
+        </a>
+      </div>
+    </div>
     <button v-on:click="popular" class="btn btn-info btn-sm">
       Reiniciar Lista
     </button>
